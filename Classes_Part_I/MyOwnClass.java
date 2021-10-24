@@ -1,4 +1,4 @@
-package CS203Course.Classes;
+package CS203Course.Classes_Part_I;
 
 import java.util.Scanner;
 
