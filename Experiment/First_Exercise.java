@@ -1,4 +1,4 @@
-package Experiment;
+package CS203Course.Experiment;
 
 import javax.swing.*;
 
