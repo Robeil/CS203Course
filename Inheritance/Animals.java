@@ -1,6 +1,7 @@
 package CS203Course.Inheritance;
 
 class Animals {
+
     public void animalSound() {
         System.out.println("The animal makes a sound");
     }

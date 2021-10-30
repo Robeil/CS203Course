@@ -59,12 +59,12 @@ public class Fortune {
             if (userInput.toLowerCase().charAt(0) == 'y') {
                 //calling the fortune-teller
                 System.out.println(teller1.fortuneTelling(fortune));
+            } else {
+                System.out.println("Okay GoodBye for now");
+                break;
             }
-
             System.out.println("Would you like me to tell you fortune again?");
             userInput = input.next();
-            System.out.println("Okay GoodBye for now");
-            break;
         }
 
     }
