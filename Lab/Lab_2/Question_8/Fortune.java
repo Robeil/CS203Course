@@ -5,6 +5,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Fortune {
+
     private ArrayList<String> fortune;
 
     public Fortune() {

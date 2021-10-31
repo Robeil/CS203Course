@@ -16,8 +16,9 @@ public class Equality {
                 }
             }
         }else {
-            areEqual =false;
+            areEqual = false;
         }
+        //Checking every element if they are equal
         if(areEqual){
             System.out.println("Both array are EQUAL");
         } else{

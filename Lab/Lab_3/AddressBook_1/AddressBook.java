@@ -1,20 +1,21 @@
-package CS203Course.Lab.Lab_3;
+package CS203Course.Lab.Lab_3.AddressBook_1;
 
 import java.util.ArrayList;
 
 public class AddressBook extends Contact {
 
-    private ArrayList<Person> person;
-    private ArrayList<Business> business;
+    protected ArrayList<Person> person = new ArrayList<>();
+    protected ArrayList<Business> business = new ArrayList<>();
 
     public AddressBook() {
-        super();
+        /*this.person = new ArrayList<>();
+        this.business = new ArrayList<>();*/
+        business.add(new Business());
     }
 
     public AddressBook(ArrayList<Person> person, ArrayList<Business> business) {
-        super();
-        this.person = person;
-        this.business = business;
+        person.add(new Person());
+        business.add(new Business());
     }
 
     public ArrayList<Person> getPerson() {
@@ -33,19 +34,9 @@ public class AddressBook extends Contact {
         this.business = business;
     }
 
- /*
-    public void AddBusiness(String name) {
+    //Adding person
+    public void addPerson(){
 
-    }*/
-    // Add person method here
-
-    // Edit person list method here
-    // Add business method here
-    // Edit business method here
-
-    @Override
-    public String toString() {
-        return super.toString() + " " + person + " " + business;
     }
+    //Adding business
 }
-

@@ -2,16 +2,33 @@ package CS203Course.Lab.Lab_3;
 
 public class Address {
 
+    private String email;
     private String street;
     private String city;
     private String state;
     private int zipCode;
 
-    public Address(String street, String city, String state, int zipCode) {
+    public Address() {
+        street = "1234 123th st";
+        city = "Seattle";
+        state = "WA";
+        zipCode = 98188;
+    }
+
+    public Address(String email, String street, String city, String state, int zipCode) {
+        this.email = email;
         this.street = street;
         this.city = city;
         this.state = state;
         this.zipCode = zipCode;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getStreet() {
@@ -45,4 +62,12 @@ public class Address {
     public void setZipCode(int zipCode) {
         this.zipCode = zipCode;
     }
+    //Add-Address
+
+
+        @Override
+        public String toString() {
+            return "\nAddress: " + street + " " + city + " " + state + " " + zipCode;
+        }
+
 }
