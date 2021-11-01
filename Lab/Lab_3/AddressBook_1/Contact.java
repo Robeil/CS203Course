@@ -86,17 +86,17 @@ public class Contact {
 
     public void setAddress(String street, String city, String state, int zipCode) {
 
-       this.street = street;
-       this.city = city;
-       this.state = state;
-       this.zipCode = zipCode;
+        this.street = street;
+        this.city = city;
+        this.state = state;
+        this.zipCode = zipCode;
     }
 
     public void setNote(String note) {
         this.note = note;
     }
 
-    public String  getNote() {
+    public String getNote() {
         return this.note;
     }
 
@@ -107,7 +107,7 @@ public class Contact {
 
     @Override
     public String toString() {
-        return "\nPhone-number: " + phoneNumber + "\nEmail: " + email + "\nAddress: " + printAddress() + "\n" +getNote();
+        return "\nPhone-number: " + phoneNumber + "\nEmail: " + email + "\nAddress: " + printAddress() + "\n" + getNote();
     }
 
 

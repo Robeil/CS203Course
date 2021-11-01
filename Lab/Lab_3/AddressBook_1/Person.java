@@ -2,8 +2,8 @@ package CS203Course.Lab.Lab_3.AddressBook_1;
 
 public class Person extends Contact {
 
-    protected String firstName;
-    protected String lastName;
+    private String firstName;
+    private String lastName;
 
     public Person() {
         super();
@@ -12,7 +12,7 @@ public class Person extends Contact {
 
     }
 
-    public  Person(String firstName, String lastName) {
+    public Person(String firstName, String lastName) {
         super();
         this.firstName = firstName;
         this.lastName = lastName;

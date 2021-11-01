@@ -5,6 +5,11 @@ import java.util.ArrayList;
 public class ContactTest {
 
     public static void main(String[] args) {
+        Contact bookAddress = new Contact();
+        ArrayList<AddressBook> addressBooks = new ArrayList<>();
+
+        System.out.println(bookAddress.toString());
+
         //creating 1st business
         //editing or setting
         Business business1 = new Business("The greatest shop");
@@ -83,6 +88,7 @@ public class ContactTest {
         System.out.println("\nSize after removing:");
         System.out.println("Person size: " +people.size());
         System.out.println("Business size: " +businesses.size());
+
 
     }
 }

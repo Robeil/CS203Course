@@ -2,7 +2,7 @@ package CS203Course.Lab.Lab_3.AddressBook_1;
 
 public class Business extends Contact {
 
-    protected String name;
+    private String name;
 
     public Business() {
         super();
