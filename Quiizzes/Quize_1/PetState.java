@@ -1,7 +1,6 @@
-package CS203Course.Quiizzes;
+package CS203Course.Quiizzes.Quize_1;
 
 public class PetState {
-
     public static String calculateState(int petAge){
         if(petAge < 3){
             return "Young";

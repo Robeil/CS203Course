@@ -1,6 +1,6 @@
-package CS203Course.Lab.Lab_1.Question_5;
+package CS203Course.Lab.Lab_1_1.Question_5;
 
-class Cat {
+public class Cat {
 
     private static final String DEFAULT_NAME = "No name";
     private static final int DEFAULT_HGT = 6;
@@ -50,8 +50,8 @@ class Cat {
     }
 
     public static void main(String[] args) {
-        Cat bombom = new Cat("Mer",11,36);
-        Cat nawnaw = new Cat();
+       Cat bombom = new Cat("Mer",11,36);
+       Cat nawnaw = new Cat();
 
         System.out.println(bombom.printInfo());
         System.out.println(nawnaw.printInfo());

@@ -21,6 +21,7 @@ public class Fortune {
     }
 
     public String fortuneTelling(ArrayList<String> fortune) {
+
         Random random = new Random();
         int ranFor = 0;
 

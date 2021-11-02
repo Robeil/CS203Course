@@ -1,25 +1,23 @@
 package CS203Course.Lab.Lab_1.Question_1;
 
 public class Exercise_1 {
-    /**
-     * public static void main( String[] args ) {
-     * Breed persian = new Breed("Persian", 10.0);
-     * Cat chacha = new Cat("Cha Cha", persian, 12.0);
-     * Cat bombom = new Cat("Bom Bom", "mix", 10.0); 1 FIXME <==
-     * Cat puffpuff = new Cat("Puff Puff", chacha, 9.0); 2 FIXME <==
-     * double diff = chacha.getWeight()
-     * - persian.getWeight();
-     * System.out.println(
-     * puffpuff.getBreed().getWeight());
-     * }
-     * }
-     */
-    /** fixme ==> Answer below
-     * We have to create the Breed object using new keyword inside the bomobom
-     * FIXME => Cat bombom = new Cat("Bom Bom", "mix", 10.0);
-     *
-     * The variable name chacha is already used we acn't resused again inside the puffpuff object
-     * FIXME => Cat puffpuff = new Cat("Puff Puff", chacha, 9.0);
-     *
-     */
+
+   public class Q1Main {
+        public static void main( String[] args ) {
+            Breed persian = new Breed("Persian", 10.0);
+            Cat chacha = new Cat("Cha Cha", persian, 12.0);
+            // fixme => i created mix Breed object to use for the bombom object
+            Breed mix = new Breed("NewMix",12);
+            //fixme => I insert the creatd bombom object
+            Cat bombom = new Cat("Bom Bom", mix, 10.0);
+            Breed chachaBreed = new Breed("chacha",11);
+            //fixme the chacha should be breed object not cat
+            Cat puffpuff = new Cat("Puff Puff", chachaBreed, 9.0);
+            double diff = chacha.getWeight()
+                    - persian.getWeight();
+            System.out.println(
+                    puffpuff.getBreed().getWeight());
+        }
+    }
+
 }

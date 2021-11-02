@@ -1,4 +1,4 @@
-package CS203Course.Quiizzes;
+package CS203Course.Quiizzes.Quize_1;
 
 public class Pet {
     private String name;
@@ -42,5 +42,9 @@ public class Pet {
 
     public String printInfo(){
         return getName() + " " + getAge() + " " + getWeight();
+    }
+
+    public static class PetState {
+
     }
 }

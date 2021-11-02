@@ -1,4 +1,6 @@
-package CS203Course.Quiizzes;
+package CS203Course.Quiizzes.Quize_1;
+
+import CS203Course.Quiizzes.Quize_1.Pet;
 
 public class PetTest {
 

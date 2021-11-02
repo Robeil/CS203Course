@@ -1,14 +1,9 @@
-package CS203Course.Lab.Lab_1.Question_13;
-
-import CS203Course.Lab.Lab_1.Question_13.WordCount.CalAge;
-import org.w3c.dom.ls.LSOutput;
+package CS203Course.Lab.Lab_1_1.Question_15;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.Scanner;
 
-
-public class CalAgeTest {
+public class AgeTest {
 
     public static void main(String[] args) {
 
@@ -27,13 +22,14 @@ public class CalAgeTest {
         if ((year <= currentYear.getYear()) && (month >= 0 && month <= 12)) {
 
             //creating object
-            CalAge person1 = new CalAge();
+            CalAge person1;
+            person1 = new CalAge(year,month); //fixme let stay like this for now
 
             //this method will validate the given date
             if (person1.checkInputDate(month, date)) {
-                System.out.println(person1.calAge(year, month));
+                System.out.println(person1.getAge());
             }
-
+            System.out.println("This is new age " + person1.getAge());
         } else {
             System.out.println("Wrong entry, enter a valid Date of birth.");
         }
