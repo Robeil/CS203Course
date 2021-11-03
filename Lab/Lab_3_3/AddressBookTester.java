@@ -1,6 +1,5 @@
 package CS203Course.Lab.Lab_3_3;
 
-
 import java.util.ArrayList;
 
 public class AddressBookTester {
@@ -12,7 +11,6 @@ public class AddressBookTester {
         //creating arrayList to store email and phone numbers
         ArrayList<EmailAddress> emailAddress = new ArrayList<>();
         ArrayList<PhoneNumber> phoneNumbers = new ArrayList<>();
-
 
         //creating email
         EmailAddress email1 = new EmailAddress();
@@ -29,7 +27,6 @@ public class AddressBookTester {
         email2.setEmailAddress("raregawi@miu.edu");
         phone1.setNumber(2066025164);
         phone2.setLandLine(123456789);
-
 
         //creating arraylist of contacts
         ArrayList<Contact> businessContact = new ArrayList<>();
@@ -50,15 +47,16 @@ public class AddressBookTester {
         businessContact.set(1, business2);
         personalContact.set(0, personal1);
         personalContact.set(1, personal2);
+
         personal1.setFirstName("Keleab");
         personal1.setLastName("Aregawi");
+        personal1.setNotes("Feels good to see it running");
 
-
-        personal1.setNotes("Finally it is working");
         personal2.setFirstName("Haben");
         personal2.setLastName("Brhanemeskel");
-        personal1.setLastName("Aregawi");
-        personal1.setNotes("Feels good to see it running");
+        personal2.setNotes("Finally it is working");
+
+
 
         business1.setFirstName("Maharishi");
         personal1.setNotes("business is working");
@@ -66,30 +64,8 @@ public class AddressBookTester {
         business1.setNotes("kkkkkkkkkkkkk business 1");
         business2.setNotes("Is it working fine?");
 
-       /* for (Contact a : businessContact) {
-            System.out.println(a.getFirstName());
-        }
-
-        for (Contact a : personalContact) {
-            System.out.println(a.getLastName());
-        }
-
-        System.out.println(personal1.getNotes());
-        System.out.println(personal2.getNotes());
-        System.out.println(business1.getNotes());
-        System.out.println(business2.getNotes());
-
-        for (EmailAddress e : emailAddress) {
-            System.out.println(e.getEmailAddress());
-        }
-        for (PhoneNumber p : phoneNumbers) {
-            System.out.println(p.getLandLine());
-        }
-        for (PhoneNumber p : phoneNumbers) {
-            System.out.println(p.getNumber());
-        }*/
         //adding personal and business contact to the address Book
-
+        contactBook.addBusinessContact(business1);
         contactBook.addBusinessContact(business2);
         contactBook.addPersonalContact(personal1);
         contactBook.addPersonalContact(personal2);
@@ -101,7 +77,6 @@ public class AddressBookTester {
         for (Contact p : businessContact) {
             System.out.println(p.getNotes());
         }
-
 
     }
 }

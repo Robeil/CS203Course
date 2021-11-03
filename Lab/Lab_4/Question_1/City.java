@@ -1,6 +1,7 @@
 package CS203Course.Lab.Lab_4.Question_1;
 
-class City  {//implements  Comparable<City>
+
+class City implements  Comparable<City>{
 
     private String cityName;
     private int temperature;
@@ -31,13 +32,12 @@ class City  {//implements  Comparable<City>
     public void setTemperature(int temperature) {
         this.temperature = temperature;
     }
-    
-   /* @Override
+
+    @Override
     public int compareTo(City o) {
         if(!(o instanceof  City)) return -1;
-        return this.temperature.compareTo(o.temperature);
+        return this.temperature - o.temperature;
     }
 
-   */
 }
 

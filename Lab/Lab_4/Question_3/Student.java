@@ -7,19 +7,40 @@ import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 
-public class Student {
+public class Student implements Comparable<Student>{
+
+    private String lastName;
+    private int idNumber;
 
 
-    public static void main(String[] args) {
-        LocalDate date = LocalDate.now();
-        LocalTime time = LocalTime.now();
-        LocalDateTime dayTime = LocalDateTime.now();
-        DateTimeFormatter formated = DateTimeFormatter.ofPattern("E => MMM-dd-yyyy HH:mm:ss");
-        String formattedDate = dayTime.format(formated);
-        System.out.println("After formatting " + formattedDate);
+    public Student() {
+        this.lastName = "MR.Interface";
+        this.idNumber = 01;
+    }
 
-        System.out.println(date);
-        System.out.println(time);
-        System.out.println(dayTime);
+    public Student(String lastName, int idNumber) {
+        this.lastName = lastName;
+        this.idNumber = idNumber;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public int getIdNumber() {
+        return idNumber;
+    }
+
+    public void setIdNumber(int idNumber) {
+        this.idNumber = idNumber;
+    }
+
+    @Override
+    public int compareTo(Student o) {
+        return this.idNumber - o.idNumber;
     }
 }

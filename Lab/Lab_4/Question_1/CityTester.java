@@ -1,6 +1,6 @@
 package CS203Course.Lab.Lab_4.Question_1;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class CityTester {
 
@@ -18,11 +18,18 @@ public class CityTester {
         cities.add(seattle);
         cities.add(israel);
 
-        for(City c: cities){
-            System.out.println(c.getCityName());
-        }
+
         //comparing cities HERE
-        System.out.println(asmara.equals(london));
+        System.out.println("The answer is : "+asmara.equals(london));
+
+        Collections.sort(cities);
+
+        System.out.println("Printing ascending");
+
+        for(City c: cities){
+            System.out.println(c.getTemperature());
+        }
+
 
     }
 }
