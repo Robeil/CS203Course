@@ -1,29 +1,34 @@
 package CS203Course.Lab.Lab_2.Question_7;
 
 import java.text.DecimalFormat;
+import java.util.Arrays;
 import java.util.Random;
 
 public class Temperature {
 
+    public static double[] namedHotCold(double[] yearTemp) {
 
-    public static void hottestTempYear(double[] yearTemp) {
+        double[] hotCold = new double[2];
         double hottest = 0.0;
+        double coldest = 0.0;
+
         for (int i = 0; i < yearTemp.length; i++) {
             if (yearTemp[i] > hottest) {
                 hottest = yearTemp[i];
             }
         }
-        System.out.println("This is the hottest ☀️  " + hottest + " for this year.");
-    }
 
-    public static void coldestTempYear(double[] yearTemp) {
-        double coldest = 0.0;
         for (int i = 0; i < yearTemp.length; i++) {
             if (yearTemp[i] < coldest) {
                 coldest = yearTemp[i];
             }
         }
+        System.out.println("This is the hottest ☀️  " + hottest + " for this year.");
         System.out.println("\nThis is the coldest ❄️ " + coldest + " for this year.");
+        hotCold[0] = hottest;
+        hotCold[1] = coldest;
+
+        return hotCold;
     }
 
     public static void main(String[] args) {
@@ -38,7 +43,7 @@ public class Temperature {
             yearTemp[i] = (double) (random.nextInt(126));
         }
 
-        coldestTempYear(yearTemp);
-        hottestTempYear(yearTemp);
+        System.out.println(Arrays.toString(namedHotCold(yearTemp)));
+
     }
 }

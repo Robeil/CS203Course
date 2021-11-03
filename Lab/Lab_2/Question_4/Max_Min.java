@@ -1,44 +1,42 @@
 package CS203Course.Lab.Lab_2.Question_4;
 
+import java.util.Arrays;
+
 public class Max_Min {
+    public static int[] maxMin(int[] array) {
 
-    //Method that find the maximum
-    public static int maximum(int[] array) {
-
-        int[] maxMin = new int[1];
+        int[] maxMin = new int[2];
         int min = 0;
         int max = 0;
 
+        //finding maximum number and storing in the array
         for (int i = 0; i < array.length; i++) {
+
             if (array[i] > max) {
                 max = array[i];
-                // maxMin[i] = array[i];
             }
-           /* if (array[i] < min) {
-                min = array[i];
-                maxMin[i] = array[i];
-            }*/
         }
-        // return maxMin;
-        return max;
-    }
 
-    //Method that find the minimum
-    public static int minimum(int[] array) {
-        int min = 0;
+        //finding minimum number and storing in the array
         for (int i = 0; i < array.length; i++) {
+
             if (array[i] < min) {
                 min = array[i];
             }
         }
-        return min;
+
+        maxMin[0] = max;
+        maxMin[1] = min;
+
+        return maxMin;
     }
 
     public static void main(String[] args) {
-        int[] array = {1, 4, -9, 33, 19, 78, 5};
 
-        System.out.println(minimum(array));
-        System.out.println(maximum(array));
+        int[] array = {1, 4, -9, 33, 19, 78, 5};
+        int[] newArray = maxMin(array);
+
+        System.out.println(Arrays.toString(newArray));
 
     }
 }

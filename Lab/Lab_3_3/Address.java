@@ -1,6 +1,6 @@
 package CS203Course.Lab.Lab_3_3;
 
-public class Address extends Contact{
+public class Address{
 
     private int residential = 0;
     private int commercial = 1;
@@ -21,6 +21,4 @@ public class Address extends Contact{
         this.state = state;
         this.zip = zip;
     }
-
-
 }

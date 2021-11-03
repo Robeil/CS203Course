@@ -1,41 +1,41 @@
-package CS203Course.Lab.Lab_3.AddressBook_1;
-
-import java.util.ArrayList;
-
-public class AddressBook extends Contact {
-
-    protected ArrayList<Person> person = new ArrayList<>();
-    protected ArrayList<Business> business = new ArrayList<>();
-
-    public AddressBook() {
-        /*this.person = new ArrayList<>();
-        this.business = new ArrayList<>();*/
-        business.add(new Business());
-    }
-
-    public AddressBook(ArrayList<Person> person, ArrayList<Business> business) {
-        person.add(new Person());
-        business.add(new Business());
-    }
-
-    public ArrayList<Person> getPerson() {
-        return person;
-    }
-
-    public void setPerson(ArrayList<Person> person) {
-        this.person = person;
-    }
-
-    public ArrayList<Business> getBusiness() {
-        return business;
-    }
-
-    public void setBusiness(ArrayList<Business> business) {
-        this.business = business;
-    }
-
-    @Override
-    public String toString(){
-        return getPerson() + " "+ getBusiness() +" "+ super.toString();
-    }
-}
+//package CS203Course.Lab.Lab_3.AddressBook_1;
+//
+//import java.util.ArrayList;
+//
+//public class AddressBook extends Contact {
+//
+//    protected ArrayList<Contact> personContacts = new ArrayList<>();
+//    protected ArrayList<Contact> businessContacts = new ArrayList<>();
+//
+//    public AddressBook() {
+//        /*this.person = new ArrayList<>();
+//        this.business = new ArrayList<>();*/
+//        businessContacts.add(new Business());
+//    }
+//
+//    public AddressBook(ArrayList<Contact> person, ArrayList<Contact> business) {
+//        personContacts.add(new Person());
+//        businessContacts.add(new Business());
+//    }
+//
+//    public ArrayList<Contact> getPerson() {
+//        return personContacts;
+//    }
+//
+//    public void setPerson(ArrayList<Contact> person) {
+//        this.personContacts = person;
+//    }
+//
+//    public ArrayList<Contact> getBusiness() {
+//        return businessContacts;
+//    }
+//
+//    public void setBusiness(ArrayList<Contact> business) {
+//        this.businessContacts = business;
+//    }
+//
+//    @Override
+//    public String toString(){
+//        return getPerson() + " "+ getBusiness() +" "+ super.toString();
+//    }
+//}

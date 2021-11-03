@@ -9,25 +9,6 @@ public class CalAge {
     private int date;
     private double age;
 
-    public CalAge(int givenYear, int givenMonth) {
-
-        LocalDate currentYear = LocalDate.now();
-        //checking if the given month is greater that the current month
-        if (month > currentYear.getMonthValue()) {
-            this.year = (currentYear.getYear() - 1) - year;
-            System.out.println(year +"."+  month +  "Years Old.");
-        } else {
-           this.year = currentYear.getYear() - year;
-            this.month = currentYear.getMonthValue() - month;
-        }
-
-    }
-
-    public double getAge() {
-        return age + month;
-    }
-
-    // VALIDATION GOES HERE
     public boolean checkInputDate(int givenMonth, int givenDate) {
 
         boolean isValidDate = false;
@@ -136,7 +117,7 @@ public class CalAge {
         return isValidDate;
     }
 
-   /* public String calAge(int year, int month) {
+    public String calAge(int year, int month) {
 
         LocalDate currentYear = LocalDate.now();
 
@@ -144,8 +125,7 @@ public class CalAge {
         int calMonth = month;
         //checking if the given month is greater that the current month
         if (month > currentYear.getMonthValue()) {
-           // calYear = (currentYear.getYear() - 1) - year;
-
+            calYear = (currentYear.getYear() - 1) - year;
 
         } else {
             calYear = currentYear.getYear() - year;
@@ -153,5 +133,5 @@ public class CalAge {
         }
 
         return calYear + "." + calMonth + " Years Old.";
-    }*/
+    }
 }

@@ -16,4 +16,28 @@ public class PhoneNumber {
         this.landLine = landLine;
         this.number = number;
     }
+
+    public int getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(int mobile) {
+        this.mobile = mobile;
+    }
+
+    public int getLandLine() {
+        return landLine;
+    }
+
+    public void setLandLine(int landLine) {
+        this.landLine = landLine;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
 }

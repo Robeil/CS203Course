@@ -7,7 +7,15 @@ public class EmailAddress {
     private String emailAddress;
 
     public EmailAddress() {
-        this.emailAddress = "robeilaregawi1@g,mail.com";
+        this.emailAddress = "robeilaregawi1@gmail.com";
+    }
+
+    public String getEmailAddress() {
+        return emailAddress;
+    }
+
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
     }
 
     public EmailAddress(int personal, int professional, String emailAddress) {
