@@ -7,6 +7,7 @@ public class AddressBook extends Contact{
     private  ArrayList<Contact> personalContacts;
     private  ArrayList<Contact> businessContacts;
 
+
     public AddressBook() {
         this.personalContacts = new ArrayList<Contact>();
         this.businessContacts = new ArrayList<Contact>();
@@ -43,6 +44,7 @@ public class AddressBook extends Contact{
         if (this.personalContacts.contains(personal)) {
             this.personalContacts.remove(personal);
         }
+        //personalContacts.remove(personal);
     }
 
     //removing existing business contact

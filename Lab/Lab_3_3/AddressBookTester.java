@@ -1,81 +1,71 @@
 package CS203Course.Lab.Lab_3_3;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class AddressBookTester {
 
     public static void main(String[] args) {
-        AddressBook contactBook = new AddressBook();
-        ArrayList<Contact> contactBook1 = new ArrayList<>();
 
-        //creating arrayList to store email and phone numbers
-        ArrayList<EmailAddress> emailAddress = new ArrayList<>();
-        ArrayList<PhoneNumber> phoneNumbers = new ArrayList<>();
+        //creating arrays list by calling the default contact constructor
+        Contact contacts = new Contact();
+        AddressBook contactBook = new AddressBook();
+
+        //creating contacts
+        Contact personal1 = new Contact("Meron", "Tekle", "She is amazing");
+        Contact business1 = new Contact("Space", "-X", "The best company ever");
+        Contact personal2 = new Contact("Robeil", "Aregawi", "It is running fine");
+        Contact business2 = new Contact("Meta Version",null, "The new name for facebook");
 
         //creating email
-        EmailAddress email1 = new EmailAddress();
-        EmailAddress email2 = new EmailAddress();
-        PhoneNumber phone1 = new PhoneNumber();
-        PhoneNumber phone2 = new PhoneNumber();
-        //adding the element to the arrays
-        emailAddress.add(email1);
-        emailAddress.add(email2);
-        phoneNumbers.add(phone1);
-        phoneNumbers.add(phone2);
-        //setting
-        email1.setEmailAddress("Silukeen1@gmail.com");
-        email2.setEmailAddress("raregawi@miu.edu");
-        phone1.setNumber(2066025164);
-        phone2.setLandLine(123456789);
+        EmailAddress businessEmail1 = new EmailAddress();
+        EmailAddress businessEmail2 = new EmailAddress();
+        EmailAddress personalEmail1 = new EmailAddress();
+        EmailAddress personalEmail2 = new EmailAddress();
 
-        //creating arraylist of contacts
-        ArrayList<Contact> businessContact = new ArrayList<>();
-        ArrayList<Contact> personalContact = new ArrayList<>();
-        //creating contacts
-        Contact personal1 = new Contact();
-        Contact personal2 = new Contact();
-        Contact business1 = new Contact();
-        Contact business2 = new Contact();
-        //adding contact to the arrayList
-        personalContact.add(personal1);
-        personalContact.add(personal2);
-        businessContact.add(business1);
-        businessContact.add(business2);
+        PhoneNumber personalPhone1 = new PhoneNumber();
+        PhoneNumber personalPhone2 = new PhoneNumber();
+        PhoneNumber businessPhone1 = new PhoneNumber();
+        PhoneNumber businessPhone2 = new PhoneNumber();
 
-        //setting the contacts
-        businessContact.set(0, business1);
-        businessContact.set(1, business2);
-        personalContact.set(0, personal1);
-        personalContact.set(1, personal2);
-
-        personal1.setFirstName("Keleab");
-        personal1.setLastName("Aregawi");
-        personal1.setNotes("Feels good to see it running");
-
-        personal2.setFirstName("Haben");
-        personal2.setLastName("Brhanemeskel");
-        personal2.setNotes("Finally it is working");
-
-
-
-        business1.setFirstName("Maharishi");
-        personal1.setNotes("business is working");
-        business2.setFirstName("Walmart");
-        business1.setNotes("kkkkkkkkkkkkk business 1");
-        business2.setNotes("Is it working fine?");
-
+        //fixme modifiying
+        Address personal = new Address(0, "1234 main street", "Nevada", "LA", 9876);
+        Address personal0 = new Address(1, "international street", "Vegas", "LA", 9876);
+        Address business = new Address(0, "7th avenue", "Los Angeles", "LA", 9876);
+        Address business0 = new Address(1, "area 51", "Nevada", "LA", 9876);
+        //setting email-address
+        personalEmail1.setEmailAddress(0, "Silukeen1@gmail.com");
+        personalEmail2.setEmailAddress(0, "robeilaregawi1@gmail.com");
+        businessEmail1.setEmailAddress(0, "workspace1@gmail.com");
+        businessEmail2.setEmailAddress(0, "spacework2@gmail.com");
+        //setting phone-numbers
+        personalPhone1.setNumber(2066025164);
+        personalPhone2.setNumber(234789022);
+        businessPhone1.setNumber(206234879);
+        businessPhone2.setNumber(245890231);
+        //adding number and email to the list
+        personal1.getPhoneNumbers().add(personalPhone1);
+        personal2.getPhoneNumbers().add(personalPhone2);
+        business1.getPhoneNumbers().add(businessPhone1);
+        business2.getPhoneNumbers().add(businessPhone2);
+        //adding address to list
+        personal1.getAddresses().add(personal);
+        personal2.getAddresses().add(personal0);
+        business1.getAddresses().add(business);
+        business2.getAddresses().add(business0);
         //adding personal and business contact to the address Book
         contactBook.addBusinessContact(business1);
         contactBook.addBusinessContact(business2);
         contactBook.addPersonalContact(personal1);
         contactBook.addPersonalContact(personal2);
 
-        for (Contact p : personalContact) {
-            System.out.println(p.getFirstName());
-        }
+        System.out.println(contactBook.toString()); //fixme HERE to print all together
 
-        for (Contact p : businessContact) {
-            System.out.println(p.getNotes());
+        // System.out.println(contactBook.getPersonalContacts());
+       // System.out.println(Arrays.toString(contactBook.getPersonalContacts().toArray()));
+
+        for (Contact p : contactBook.getBusinessContacts()) {
+            System.out.println(p.toString()); //fixme => add toString()
         }
 
     }

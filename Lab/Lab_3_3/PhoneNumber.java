@@ -2,35 +2,18 @@ package CS203Course.Lab.Lab_3_3;
 
 public class PhoneNumber {
 
-    private int mobile = 0;
-    private int landLine = 1;
+    private int type;
     private int number;
 
 
     public PhoneNumber() {
+        this.type = 0;
         this.number = 2066025164;
     }
 
-    public PhoneNumber(int mobile, int landLine, int number) {
-        this.mobile = mobile;
-        this.landLine = landLine;
+    public PhoneNumber(int type, int number) {
+        this.type = 0;
         this.number = number;
-    }
-
-    public int getMobile() {
-        return mobile;
-    }
-
-    public void setMobile(int mobile) {
-        this.mobile = mobile;
-    }
-
-    public int getLandLine() {
-        return landLine;
-    }
-
-    public void setLandLine(int landLine) {
-        this.landLine = landLine;
     }
 
     public int getNumber() {
